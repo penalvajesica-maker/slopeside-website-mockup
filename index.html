@@ -219,6 +219,7 @@
   .home:first-child { grid-row: span 2; }
   .home img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
   .home:hover img { transform: scale(1.05); }
+  .photo-ph { position: absolute; top: 12px; left: 12px; margin: 0; z-index: 2; }
   .home .cap { position: absolute; left: 0; bottom: 0; background: var(--snow); padding: 12px 18px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 15px; }
   .home .cap span { display: block; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 12px; color: var(--slate); }
   .homes-note { margin-top: 16px; font-size: 13px; color: var(--slate); }
@@ -271,6 +272,8 @@
   .footer-grid a { display: block; padding: 4px 0; }
   .footer-grid a:hover { color: var(--alpine); }
   .footer-brand b { font-family: 'Sora', sans-serif; color: var(--snow); font-size: 18px; display: block; margin-bottom: 10px; }
+  .credits { margin-top: 10px; font-size: 12px; color: rgba(247,247,245,0.5); line-height: 1.6; }
+  .credits a { text-decoration: underline; }
   .footer-bottom { border-top: 1px solid var(--line-light); margin-top: 48px; padding-top: 24px; font-size: 13px; }
 
   /* ---------- Reveal on scroll (only when JS runs) ---------- */
@@ -318,7 +321,8 @@
     .hero-ctas .btn, form .btn, .aquatics-inner .btn { width: 100%; justify-content: center; }
     .homes-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 240px; grid-auto-rows: 170px; gap: 10px; }
     .home:first-child { grid-column: 1 / -1; }
-    .home .cap { padding: 8px 12px; font-size: 13px; }
+    .photo-ph { position: absolute; top: 12px; left: 12px; margin: 0; z-index: 2; }
+  .home .cap { padding: 8px 12px; font-size: 13px; }
     form { grid-template-columns: 1fr; }
     .voice { padding: 28px; }
     .visit { grid-template-columns: 1fr; gap: 28px; }
@@ -370,8 +374,9 @@
     </div>
   </div>
   <div class="hero-media">
-    <!-- REEMPLAZAR: foto real de Sun Peaks (idealmente una propiedad gestionada o el pueblo en invierno) -->
-    <img src="https://images.unsplash.com/photo-1477310405250-8113258ed5cd?fm=jpg&q=80&w=1600&auto=format&fit=crop" alt="Snow-covered alpine village below the mountains">
+    <!-- FOTO PROVISIONAL (Wikimedia Commons, Murray Foubister, CC BY-SA 2.0). REEMPLAZAR por foto propia de Slopeside -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sun_Peaks_base_area_%2815655853176%29.jpg/1920px-Sun_Peaks_base_area_%2815655853176%29.jpg" alt="Sun Peaks village base area in winter">
+    <span class="ph photo-ph">Temporary photo</span>
     <div class="hero-tag"><span class="dot"></span><span>Local team with 24-hour emergency contact.</span></div>
   </div>
 </section>
@@ -464,9 +469,9 @@
 <section class="family" id="family">
   <div class="wrap family-grid">
     <div class="family-photo reveal">
-      <!-- REEMPLAZAR: foto real de la familia / equipo Slopeside -->
-      <img src="https://images.unsplash.com/photo-1484255877288-39571777fade?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Chalet in a mountain community">
-      <span class="ph">Team photo goes here</span>
+      <!-- FOTO PROVISIONAL (Wikimedia Commons, Murray Foubister, CC BY-SA 2.0). REEMPLAZAR por foto de la familia / equipo -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sun_Peaks_Nordic_scenes_-_the_warming_Hut_at_McGillivray_Lake_%2815485922980%29.jpg/1280px-Sun_Peaks_Nordic_scenes_-_the_warming_Hut_at_McGillivray_Lake_%2815485922980%29.jpg" alt="Snowy cabin in Sun Peaks">
+      <span class="ph">Temporary photo, team photo goes here</span>
       <div class="since"><b>2017</b><span>the year we moved to Sun Peaks</span></div>
     </div>
     <div class="family-copy">
@@ -516,15 +521,15 @@
       </div>
       <p class="reveal d2">A look at some of the Sun Peaks communities where we work.</p>
     </div>
-    <!-- REEMPLAZAR: fotos reales de propiedades gestionadas -->
+    <!-- FOTOS PROVISIONALES de Sun Peaks (Wikimedia Commons, ver creditos en el footer). REEMPLAZAR por fotos reales de cada comunidad -->
     <div class="homes-grid">
-      <div class="home reveal"><img src="https://images.unsplash.com/photo-1680634326749-40efc7e1a7f4?fm=jpg&q=80&w=1000&auto=format&fit=crop" alt="Mountain chalet"><div class="cap">Village Walk<span>Sun Peaks</span></div></div>
-      <div class="home reveal d1"><img src="https://images.unsplash.com/photo-1546706442-373624e9c90b?fm=jpg&q=80&w=700&auto=format&fit=crop" alt="Home near the ski slopes"><div class="cap">Echo Landing<span>Sun Peaks</span></div></div>
-      <div class="home reveal d2"><img src="https://images.unsplash.com/photo-1477310405250-8113258ed5cd?fm=jpg&q=80&w=700&auto=format&fit=crop" alt="Alpine village"><div class="cap">Altitude<span>Sun Peaks</span></div></div>
-      <div class="home reveal d1"><img src="https://images.unsplash.com/photo-1484255877288-39571777fade?fm=jpg&q=80&w=700&auto=format&fit=crop" alt="Chalet exterior"><div class="cap">Powder Heights<span>Sun Peaks</span></div></div>
-      <div class="home reveal d2"><img src="https://images.unsplash.com/photo-1680634326749-40efc7e1a7f4?fm=jpg&q=80&w=700&auto=format&fit=crop" alt="Chalet in the trees"><div class="cap">Switchback Creek<span>Sun Peaks</span></div></div>
+      <div class="home reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sun_Peaks_Downtown.jpg/1280px-Sun_Peaks_Downtown.jpg" alt="Sun Peaks village in winter with Mount Tod behind" loading="lazy"><span class="ph photo-ph">Temporary photo</span><div class="cap">Village Walk<span>Sun Peaks</span></div></div>
+      <div class="home reveal d1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Creekside_Way%2C_Sun_Peaks_-_panoramio.jpg/960px-Creekside_Way%2C_Sun_Peaks_-_panoramio.jpg" alt="Townhomes on Creekside Way, Sun Peaks" loading="lazy"><span class="ph photo-ph">Temporary photo</span><div class="cap">Echo Landing<span>Sun Peaks</span></div></div>
+      <div class="home reveal d2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Sun_Peaks_Hotels.jpg/960px-Sun_Peaks_Hotels.jpg" alt="Snow-covered buildings in Sun Peaks village" loading="lazy"><span class="ph photo-ph">Temporary photo</span><div class="cap">Altitude<span>Sun Peaks</span></div></div>
+      <div class="home reveal d1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/New_houses_under_construction_%28multi_Million_%24%24%29_%2816116953042%29.jpg/960px-New_houses_under_construction_%28multi_Million_%24%24%29_%2816116953042%29.jpg" alt="Timber-frame mountain home in Sun Peaks" loading="lazy"><span class="ph photo-ph">Temporary photo</span><div class="cap">Powder Heights<span>Sun Peaks</span></div></div>
+      <div class="home reveal d2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Sun_Peaks_Lodge.jpg/960px-Sun_Peaks_Lodge.jpg" alt="Mountain lodge in Sun Peaks in winter" loading="lazy"><span class="ph photo-ph">Temporary photo</span><div class="cap">Switchback Creek<span>Sun Peaks</span></div></div>
     </div>
-    <p class="homes-note"><span class="ph" style="margin:0 8px 0 0">Illustrative photos</span>Replace with real photography of each community.</p>
+    <p class="homes-note">Temporary photos of Sun Peaks, not of these specific properties. They will be replaced with Slopeside's own photography.</p>
   </div>
 </section>
 
@@ -618,7 +623,14 @@
         <a href="#contact">Owner inquiry</a>
       </div>
     </div>
-    <div class="footer-bottom">&copy; <span id="yr">2026</span> Slopeside Property Management. All rights reserved.</div>
+    <div class="footer-bottom">&copy; <span id="yr">2026</span> Slopeside Property Management. All rights reserved.
+      <p class="credits">Temporary photos from Wikimedia Commons, used until Slopeside's own photography is ready:
+        <a href="https://commons.wikimedia.org/wiki/File:Sun_Peaks_base_area_(15655853176).jpg" target="_blank" rel="noopener">Murray Foubister</a> (CC BY-SA 2.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Sun_Peaks_Downtown.jpg" target="_blank" rel="noopener">Green slash</a> (CC BY-SA 3.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Creekside_Way,_Sun_Peaks_-_panoramio.jpg" target="_blank" rel="noopener">ChrisStubbs</a> (CC BY-SA 3.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Sun_Peaks_Hotels.jpg" target="_blank" rel="noopener">jhopkins</a> (CC BY 2.0).
+        Licenses: <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>.</p>
+    </div>
   </div>
 </footer>
 
